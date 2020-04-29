@@ -47,14 +47,14 @@ img {
 .main-navigation {
 	position: relative;
 
-	padding: 45px 60px 160px 60px;
+	padding: 35px 60px 35px 60px;
 
 	background-color: rgba(240, 197, 46, 0.5);
 }
 
-.main-navigation .user-navigation,
-.main-navigation .site-navigation,
-.main-navigation .category-list {
+.user-navigation,
+.site-navigation,
+.category-list {
 	margin: 0;
 	padding: 0;
 
@@ -64,12 +64,13 @@ img {
 .main-header-logo {
 	position: absolute;
 	top: -24px;
-	left: 60px;
+	left: 58px;
 
 	font-family: 'Gilroy Extra Bold', Arial, Helvetica, sans-serif;
 	font-size: 48px;
 	line-height: 48px;
 	font-weight: 800;
+	letter-spacing: 0.48px;
 	text-transform: uppercase;
 }
 
@@ -83,6 +84,8 @@ img {
 
 .user-navigation {
 	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 28px;
 }
 
 .search-form {
@@ -106,7 +109,7 @@ img {
 	background-color: transparent;
 	background-image: url(img/search.svg);
 	background-repeat: no-repeat;
-	background-position: 3px 15px;
+	background-position: 3px 16px;
 	background-size: 16px 16px;
 	border: 0;
 	outline: 0;
@@ -139,12 +142,7 @@ img {
 	background-color: transparent;
 }
 
-.search-btn:hover,
-.search-btn:focus {
-	color: #ffffff;
 
-	background-color: #000000;
-}
 
 .search-btn:active {
 	color: rgba(255, 255, 255, 0.3);
@@ -153,8 +151,8 @@ img {
 .search-btn:hover::before,
 .search-btn:focus::before,
 .search-btn:active::before,
-.search-field:focus~.search-btn::before,
-.search-field:valid~.search-btn::before {
+.search-field:focus ~ .search-btn::before,
+.search-field:valid ~ .search-btn::before {
 	content: "";
 	position: absolute;
 	right: 0;
@@ -163,10 +161,176 @@ img {
 	width: 440px;
 
 	border-bottom: 2px solid #000000;
-}
-
-
-.search-field:focus~.search-btn,
-.search-field:valid~.search-btn {
 	visibility: visible;
 }
+
+.search-field:focus ~ .search-btn,
+.search-field:valid ~ .search-btn {
+	visibility: visible;
+}
+
+.search-btn:hover,
+.search-btn:focus {
+	visibility: visible;
+
+	color: #ffffff;
+
+	background-color: #000000;
+}
+
+.search-btn:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.user-navigation a {
+	position: relative;
+
+	display: block;
+	padding-left: 27px;
+
+	color: #000000;
+}
+.user-navigation li:not(:nth-child(1)) {
+	padding-top: 8px;
+}
+
+.user-navigation li:nth-child(2) {
+	margin-right: auto;
+}
+.user-navigation li:nth-child(n+3) {
+	margin-left: 38px;
+}
+
+.user-navigation .login::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 9px;	
+
+	width: 13px;
+	height: 12px;
+
+	background-image: url(img/user.svg);
+}
+
+.user-navigation .compare::before {
+	content: '';
+	position: absolute;
+	left: 7px;
+	top: 11px;	
+
+	width: 10px;
+	height: 10px;
+
+	background-image: url(img/compare.svg);
+}
+
+.user-navigation .cart::before {
+	content: '';
+	position: absolute;
+	left: 4px;
+	top: 9px;	
+
+	width: 12px;
+	height: 12px;
+
+	background-image: url(img/cart.svg);
+}
+
+.user-navigation a:hover,
+.user-navigation a:focus{
+	opacity: 0.6;
+}
+
+.user-navigation a:active {
+	opacity: 0.3;
+}
+
+.category-list {
+	display: none;
+}
+
+.site-navigation {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+	opacity: 0.6;
+}
+
+.site-navigation a:active {
+	opacity: 0.3;
+}
+
+.navigation-item > a {
+	font-family: 'Gilroy Extra Bold', Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	text-transform: uppercase;
+	letter-spacing: 3.6px;
+	color: #000000;
+}
+
+.navigation-item:first-child {
+	width: 540px;
+}
+
+.catalog-hover {
+	position: relative;
+	padding-right: 27px;
+}
+
+.navigation-item:first-child:hover .category-list {
+	display: flex;
+}
+
+
+.catalog-hover::after {
+	content: '';
+	position: absolute;
+	top:50%;
+	right: 0;
+
+	width: 16px;
+	height: 16px;
+	margin-top: -8px;
+
+	background: url(img/plus.png) no-repeat 0 0;
+}
+
+.navigation-item:nth-child(n+2) {
+	margin-right: 35px;
+}
+
+.navigation-item:last-child {
+	margin-right: -5px;
+	margin-left: auto;
+}
+
+.popular-list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.popular-item {
+	display: flex;
+	padding: 0px 60px 0px 60px;
+}
+
+.popular-item-left {
+	width: 540px;
+}
+
+.popular-item-left img{
+	position: relative;
+	top: 0;
+	left: 0;z
+}
+
+.popular-item-right {
+	width: 480px;
+}
+

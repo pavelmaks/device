@@ -16,32 +16,38 @@
 			<nav class="main-navigation">
 					<a class="main-header-logo">Device</a>
 					<ul class="user-navigation">
-						<li class="header-search">
+						<li>
 							<form action="https://echo.htmlacademy.ru/" class="search-form" method="POST">
 								<label for="search" class="visually-hidden">Поиск по сайту</label>
 								<input id="search" class="search-field" type="text" name="search" autocomplete="off" placeholder="Поиск по сайту" required>
 								<button class="search-btn" type="submit">Найти</button>
 							</form>
 						</li>
-						<li class="header-login">Вход</li>
-						<li class="header-compare">Сравнить</li>
-						<li class="header-cart">Корзина</li>
+						<li>
+							<a href="" class="login">Войти</a>
+						</li>
+						<li>
+							<a href="" class="compare">Сравнить</a>
+						</li>
+						<li>
+							<a href="" class="cart">Корзина</a>							
+						</li>
 					</ul>
 					<ul class="site-navigation">
-						<li>
-							<a href="#">Каталог товаров</a>
+						<li class="navigation-item">
+							<a class="catalog-hover" href="#">Каталог товаров</a>
 							<ul class="category-list">
-								<li><a href="#">Виртуальная реальность</a></li>
-								<li><a href="#">Фитнес-браслеты</a></li>
-								<li><a href="#">Квадрокоптеры</a></li>
-								<li><a href="#">Моноподы для селфи</a></li>
-								<li><a href="#">Умные часы</a></li>
-								<li><a href="#">Экшн-камеры</a></li>
+								<li class="category-item" ><a href="#">Виртуальная реальность</a></li>
+								<li class="category-item"><a href="#">Фитнес-браслеты</a></li>
+								<li class="category-item"><a href="#">Квадрокоптеры</a></li>
+								<li class="category-item"><a href="#">Моноподы для селфи</a></li>
+								<li class="category-item"><a href="#">Умные часы</a></li>
+								<li class="category-item"><a href="#">Экшн-камеры</a></li>
 							</ul>
 						</li>
-						<li><a href="">Доставка</a></li>
-						<li><a href="">Гарантия</a></li>
-						<li><a href="">Контакты</a></li>
+						<li class="navigation-item"><a href="">Доставка</a></li>
+						<li class="navigation-item"><a href="">Гарантия</a></li>
+						<li class="navigation-item"><a href="">Контакты</a></li>
 					</ul>
 			</nav>
 		</div>
@@ -52,24 +58,28 @@
 			<h2 class="visually-hidden">Популяные товары</h2>
 			<ul class="popular-list">
 				<li class="popular-item">
-					<img src="" alt="">
-					<p class="popular-slogan">Делай селфи, как Бен Стиллер! </p>
-					<p class="popular-desc">
-						Самая длинная палка для селфи доступна в нашем магазине.
-						Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
-					</p>
-					<p class="popular-navigation">
-						<a href="product-item.html" class="button">Подробнее</a>
-						<!-- Три точки навигация -->
-					</p>
-					<dl>
-						<dt>Длина палки</dt>
-						<dd>8,5 м</dd>
-						<dt>Вес палки</dt>
-						<dd>5 кг</dd>
-						<dt>Материал</dt>
-						<dd>Карбон</dd>
-					</dl>
+					<div class="popular-item-left">
+						<img src="img/slider-1.png" width="384" height="486" alt="Селфи палка">
+					</div>
+					<div class="popular-item-right">
+						<p class="popular-slogan">Делай селфи, как Бен Стиллер! </p>
+						<p class="popular-desc">
+							Самая длинная палка для селфи доступна в нашем магазине.
+							Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+						</p>
+						<p class="popular-navigation">
+							<a href="product-item.html" class="button">Подробнее</a>
+							<!-- Три точки навигация -->
+						</p>
+						<dl>
+							<dt>Длина палки</dt>
+							<dd>8,5 м</dd>
+							<dt>Вес палки</dt>
+							<dd>5 кг</dd>
+							<dt>Материал</dt>
+							<dd>Карбон</dd>
+						</dl>
+					</div>
 				</li>
 				<!-- Тут еще два слайда -->
 			</ul>
