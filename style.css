@@ -49,7 +49,8 @@ img {
 
 	padding: 35px 60px 35px 60px;
 
-	background-color: rgba(240, 197, 46, 0.5);
+	/* background-color: rgba(240, 197, 46, 0.5); */
+	background-color: #f7e296;
 }
 
 .user-navigation,
@@ -248,11 +249,34 @@ img {
 
 .category-list {
 	display: none;
+
+	position: absolute;
+
+	background-color: #f7e296;
 }
+
+
+
+.category-list a {
+	display: block;
+	margin-right: 60px;
+
+	font-size: 15px;
+	line-height: 36px;
+	letter-spacing: 0.15px;
+	color: #000;
+	
+}
+
+.category-item:nth-child(5) a {
+	margin-bottom: 20px;
+}
+
 
 .site-navigation {
 	display: flex;
 	flex-wrap: wrap;
+
 }
 
 .site-navigation a:hover,
@@ -284,6 +308,13 @@ img {
 
 .navigation-item:first-child:hover .category-list {
 	display: flex;
+	padding: 18px 0 22px 0;
+	flex-wrap: wrap;
+	flex-direction: column;
+	z-index: 2;
+	width: 1040px;
+	height: 120px;
+	align-content: flex-start;
 }
 
 
@@ -308,11 +339,28 @@ img {
 	margin-right: -5px;
 	margin-left: auto;
 }
+.main-slider{
+	position: relative;
+}
+
+.main-slider:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 1160px;
+	height: 125px;
+
+	background-color: #f7e296;
+	z-index: -1;
+}
 
 .popular-list{
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	z-index: 1;
 }
 
 .popular-item {
@@ -327,10 +375,17 @@ img {
 .popular-item-left img{
 	position: relative;
 	top: 0;
-	left: 0;z
+	left: 30px;
 }
 
 .popular-item-right {
 	width: 480px;
+}
+
+.popular-slogan {
+	margin: 0;
+	font-family: 'Gilroy Extra Bold', Arial, Helvetica, sans-serif;
+	font-size: 47px;
+	line-height: 56px;
 }
 
