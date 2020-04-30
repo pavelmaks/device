@@ -344,6 +344,8 @@ img {
 
 .main-slider {
 	position: relative;
+	min-height: 550px;
+	margin-bottom: 56px;
 }
 
 .main-slider:before {
@@ -381,7 +383,7 @@ img {
 	position: relative;
 	top: 50%;
 	left: 40%;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
 }
 
 .popular-item-right {
@@ -464,16 +466,16 @@ img {
 	z-index: -1;
 
 	background-color: #f0c52e;
-	transition: transform ease 0.2s; 
+	transition: transform ease 0.2s;
 }
 
 .button:hover::before,
-.button:focus::before{
+.button:focus::before {
 	transform: scaleY(5);
 }
 
-.button:active{
-	color:rgba(0, 0, 0, 0.3)
+.button:active {
+	color: rgba(0, 0, 0, 0.3)
 }
 
 .popular-navigation {
@@ -489,41 +491,41 @@ img {
 
 .slider-controls {
 	position: absolute;
-	top:332px;
+	top: 332px;
 	right: 80px;
 }
 
 .slider-controls label {
 	position: relative;
 	display: inline-block;
-  margin-left: 18px;
-  width: 10px;
-  height: 10px;
-  border: 1px solid #000000;
-  border-radius: 50%;
-  /* box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 1); */
-  cursor: pointer;
+	margin-left: 18px;
+	width: 10px;
+	height: 10px;
+	border: 1px solid #000000;
+	border-radius: 50%;
+	/* box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 1); */
+	cursor: pointer;
 }
 
-#btn-1:checked ~ .slider-controls label[for="btn-1"]::before,
-#btn-2:checked ~ .slider-controls label[for="btn-2"]::before,
-#btn-3:checked ~ .slider-controls label[for="btn-3"]::before {
+#btn-1:checked~.slider-controls label[for="btn-1"]::before,
+#btn-2:checked~.slider-controls label[for="btn-2"]::before,
+#btn-3:checked~.slider-controls label[for="btn-3"]::before {
 	content: '';
 	position: absolute;
-	top:50%;
+	top: 50%;
 	left: 50%;
 
-	transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
 	width: 3px;
 	height: 3px;
 	border: 1px solid #000000;
-  border-radius: 50%;
+	border-radius: 50%;
 }
 
-#btn-1:checked ~ .popular-list .popular-item:nth-child(1),
-#btn-2:checked ~ .popular-list .popular-item:nth-child(2),
-#btn-3:checked ~ .popular-list .popular-item:nth-child(3) {
- display: flex;
+#btn-1:checked~.popular-list .popular-item:nth-child(1),
+#btn-2:checked~.popular-list .popular-item:nth-child(2),
+#btn-3:checked~.popular-list .popular-item:nth-child(3) {
+	display: flex;
 }
 
 .popular-table dt,
@@ -552,4 +554,79 @@ img {
 	font-family: 'Gilroy Light', Arial, Helvetica, sans-serif;
 	font-size: 36px;
 	line-height: 48px;
+}
+
+.assortment-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+.assortment-list li {
+	position: relative;
+
+	padding-top: 190px;
+	width: 160px;
+}
+
+.assortment-item:before,
+.assortment-item:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 160px;
+	height: 160px;
+}
+
+.assortment-item:before {
+	background-color: #f7e296;
+}
+
+.assortment-item:hover:before,
+.assortment-item:focus:before {
+	background-color: #f0c52e;
+}
+.assortment-item:active::after {
+	opacity: 0.3;
+}
+.assortment-item:active {
+	color: rgba(0, 0, 0, 0.3)
+}
+
+.assortment-list li:nth-child(1) .assortment-item:after {
+	background: url(img/popular-1.svg) 31px 52px no-repeat;
+}
+
+.assortment-list li:nth-child(2) .assortment-item:after {
+	background: url(img/popular-2.svg) 38px 41px no-repeat;
+}
+
+.assortment-list li:nth-child(3) .assortment-item:after {
+	background: url(img/popular-3.svg) 48px 38px no-repeat;
+}
+
+.assortment-list li:nth-child(4) .assortment-item:after {
+	background: url(img/popular-4.svg) 28px 50px no-repeat;
+}
+
+.assortment-list li:nth-child(5) .assortment-item:after {
+	background: url(img/popular-5.svg) 55px 32px no-repeat;
+}
+
+.assortment-list li:nth-child(6) .assortment-item:after {
+	background: url(img/popular-6.svg) 13px 49px no-repeat;
+}
+
+.assortment-item {
+	font-family: 'Gilroy Extra Bold', Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	color: #000000;
+	letter-spacing: 0.18px;
 }
