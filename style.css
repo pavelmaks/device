@@ -1080,7 +1080,7 @@ img {
 }
 
 .page-title {
-	margin: 50px 0;
+	margin: 50px 0 20px 0;
 	font-size: 47px;
 	line-height: 48px;
 	font-family: 'Gilroy Extra Bold', Arial, Helvetica, sans-serif;
@@ -1106,7 +1106,7 @@ img {
 	padding-right: 40px;
 }
 
-.breadcrumbs a{
+.breadcrumbs a {
 	font-size: 14px;
 	line-height: 24px;
 	color: rgba(0, 0, 0, 0.3);
@@ -1123,7 +1123,7 @@ img {
 }
 
 .breadcrumbs li:not(:last-child)::after {
-	content:'';
+	content: '';
 	position: absolute;
 	top: 8.5px;
 	right: 18px;
@@ -1133,6 +1133,8 @@ img {
 }
 
 .sorts {
+	flex-grow: 1;
+	width: 852px;
 	background-color: rgba(0, 0, 0, 0.08);
 
 }
@@ -1154,7 +1156,7 @@ img {
 	list-style: none;
 }
 
-.sort-item{
+.sort-item {
 	margin-right: 25px;
 }
 
@@ -1172,6 +1174,7 @@ img {
 .sort-btn:active {
 	color: rgba(0, 0, 0, 1);
 }
+
 .sort-btn.current {
 	color: rgba(0, 0, 0, 1);
 }
@@ -1184,10 +1187,246 @@ img {
 	margin-left: auto;
 }
 
+.sort-narrow-item:not(:last-child) {
+	margin-right: 20px;
+}
+
 .sort-container {
 	display: flex;
 	align-items: baseline;
 	padding-top: 20px;
-	padding-bottom: 20px;	
-	padding-left: 400px;
+	padding-bottom: 20px;
+}
+
+.narrow-bth {
+	display: block;
+	width: 11px;
+	height: 10px;
+	opacity: 0.2;
+}
+
+.narrow-bth.top {
+	background: url(img/icon-up-dir.svg) 0 0 no-repeat;
+}
+
+.narrow-bth.bottom {
+	background: url(img/icon-down-dir.svg) 0 0 no-repeat;
+}
+
+.narrow-bth:hover,
+.narrow-bth:focus {
+	opacity: 0.6;
+}
+
+.narrow-bth.active,
+.narrow-bth:active {
+	opacity: 1;
+}
+
+.filter-header h2 {
+	margin: 0;
+	margin-left: auto;
+	margin-right: 68px;
+	padding: 23px 0;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 3.6px;
+	text-transform: uppercase;
+	font-family: 'Gilroy Extra Bold', Arial, Helvetica, sans-serif;
+	width: 200px;
+}
+
+.filter-header {
+	flex-grow: 1;
+	width: 348px;
+	background-color: #dbdbdb;
+}
+
+.filters {
+	background-color: rgba(0, 0, 0, 0.08);
+	flex-grow: 1;
+	width: 348px;
+	display: flex;
+	padding-bottom: 70px;
+
+}
+
+.catalog {
+	flex-grow: 1;
+	width: 852px;
+}
+
+.filters-container {
+	width: 200px;
+	margin-left: auto;
+	padding-right: 68px;
+}
+
+.sections-container {
+	display: flex;
+}
+
+.form-catalog fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	margin-top: 70px;
+}
+
+.form-catalog legend {
+	padding: 10px 0 10px 0;
+	font-size: 18px;
+	line-height: 24px;
+	font-family: 'Gilroy Extra Bold', Arial, Helvetica, sans-serif;
+	border-top: 2px solid #000;
+	width: 100%;
+}
+
+.form-catalog .range-legend {
+	padding: 10px 0 35px 0;
+}
+
+.form-catalog .range {
+	width: 100%;
+	height: 2px;
+	background-color: #dbdbdb;
+	position: relative;
+}
+
+.form-catalog .range::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 107px;
+	height: 2px;
+	background-color: #91c92f;
+}
+
+.range-left-btn,
+.range-right-btn {
+	position: absolute;
+	width: 21px;
+	height: 21px;
+	display: block;
+	background: url(img/filter-button.svg);
+}
+
+.range-left-btn {
+	top: -11px;
+	left: -6px;
+}
+
+.range-right-btn {
+	top: -11px;
+	left: 107px;
+}
+
+.colors-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	margin-top: 10px;
+}
+
+.colors-item {
+	position: relative;
+	padding-left: 40px;
+}
+
+.colors-item .label-text {
+	font-size: 14px;
+	line-height: 40px;
+}
+
+.colors-item label::before {
+	content: '';
+	position: absolute;
+	top: 9px;
+	left: 0;
+	width: 23px;
+	height: 23px;
+	background: url(img/checkbox-off.svg) 0 0 no-repeat;
+}
+
+.colors-list input[type="checkbox"]:checked+.checkbox-indicator {
+	position: absolute;
+	top: 9px;
+	left: 0;
+	display: block;
+	width: 27px;
+	height: 23px;
+	background: url(img/checkbox-on.svg) 0 0 no-repeat;
+}
+
+.range-price {
+	margin-top: 10px;
+	font-size: 14px;
+	line-height: 24px;
+	font-family: 'Gilroy Light', Arial, Helvetica, sans-serif;
+	color: rgba(0, 0, 0, 0.2)
+}
+
+.range-left-price {
+	margin-right: 60px;
+}
+
+.form-catalog .colors-fieldset {
+	margin-top: 32px;
+}
+
+.bluetooth-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	margin-top: 10px;
+}
+
+.bluetooth-item {
+	position: relative;
+	padding-left: 40px;
+}
+
+.bluetooth-item .label-text {
+	font-size: 14px;
+	line-height: 40px;
+}
+
+.bluetooth-item label::before {
+	content: '';
+	position: absolute;
+	top: 8px;
+	left: 0;
+	width: 25px;
+	height: 25px;
+	background: url(img/radio-off.svg) 0 0 no-repeat;
+}
+
+.bluetooth-list input[type="radio"]:checked + .radio-indicator {
+	position: absolute;
+	top: 8px;
+	left: 0;
+	display: block;
+	width: 25px;
+	height: 25px;
+	background: url(img/radio-on.svg) 0 0 no-repeat;
+}
+
+.filters-button {
+	margin-top: 30px;	
+	padding-left: 0;
+	padding-right: 0;
+	width: 200px;
+	font-size: 18px;
+	line-height: 24px;
+	letter-spacing: 3.6px;
+
+	text-align: center;
+	border: 0;
+	background-color: transparent;
+	z-index: 2;
+}
+
+.form-catalog .bluetooth-fieldset {
+	margin-top: 30px;
 }
