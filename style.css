@@ -1196,6 +1196,8 @@ img {
 	align-items: baseline;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	width: 760px;
+	margin-left: 73px;
 }
 
 .narrow-bth {
@@ -1429,4 +1431,118 @@ img {
 
 .form-catalog .bluetooth-fieldset {
 	margin-top: 30px;
+}
+
+.catalog-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.catalog-item {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 360px;
+	margin-bottom: 20px;
+}
+
+.catalog-item-image {
+	margin: 0;
+	padding: 0;
+}
+
+.catalog-item-title {
+	margin: 0;
+	font-size: 18px;
+	line-height: 24px;
+	font-family: 'Gilroy Extra Bold', Arial, Helvetica, sans-serif;
+	width: 260px;
+}
+
+.catalog-item-price {
+	margin: 0;
+	font-size: 14px;
+	line-height: 24px;
+	font-family: 'Gilroy Light', Arial, Helvetica, sans-serif;
+}
+
+.catalog-text {
+	padding: 23px 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.catalog-container {
+	padding: 69px 0 76px 73px;
+	width: 760px;
+}
+.catalog-item-hover{
+	display: none;
+}
+
+.catalog-item:hover .catalog-item-hover {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:center;
+	top: 0;
+	left: 0;
+	width: 360px;
+	height: 380px;
+	background-color: rgba(238, 238, 238, 0.7);
+	z-index: 1;
+}
+
+.catalog-button {
+	margin: 20px 0;
+	font-size: 18px;
+	line-height: 24px;
+	letter-spacing: 3.6px;
+
+	text-align: center;
+	border: 0;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.compare-button {
+	font-size: 13px;
+	font-family: 'Gilroy Light', Arial, Helvetica, sans-serif;
+	text-align: center;
+	border: 0;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.pagination {
+	padding: 25px 25px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 3.6px;
+	font-family: 'Gilroy Extra Bold', Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	background-color: rgba(238, 238, 238, 0.7);
+}
+
+.pagination-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+}
+
+.pagination-item a {
+	color: #000000;
+
+}
+
+.pagination-item:nth-child(2n) {
+	margin: 0 30px;
 }
